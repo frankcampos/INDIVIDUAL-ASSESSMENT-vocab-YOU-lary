@@ -1,4 +1,5 @@
-import createVocabularyCard from '../api/createVocabularyCard';
+import { updateVocabularyCard, createVocabularyCard } from '../api/createVocabularyCard';
+import clearDom from '../utils/clearDom';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit',
@@ -14,7 +15,12 @@ const formEvents = (user) => {
           languageOrtech: document.querySelector('#languageTech').value,
           uid: user.uid
         };
-        createVocabularyCard(payload);
+        createVocabularyCard(payload).then(({ name }) => {
+          console.warn('this createbook name', name);
+          const patchPayload = { firebaseKey: name };
+          updateVocabularyCard(patchPayload);
+          clearDom();
+        });
       }
     });
 };
