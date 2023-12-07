@@ -16,12 +16,15 @@ const addVocabularyForm = (vocabularyEntryObjParam = {}) => {
         <input type="text" class="form-control" id="definition" value="${vocabularyEntryObj.definition || ''}" placeholder="Enter a definition" required>
       </div>
       <div class="form-group">
-        <label for="languageTech">Language/Tech</label>
-        <select class="form-control" id="languageTech">
-            <option selected>${vocabularyEntryObj.languageTech || 'Placeholder'}</option>
-            <!-- Add more language/tech options here -->
-        </select>
-      </div>
+  <label for="languageTech">Language/Tech</label>
+  <select class="form-control" id="languageTech" required>
+    <option value="" disabled ${!vocabularyEntryObj.languageTech && 'selected'}>Choose Language/Tech</option>
+    <option value="JavaScript" ${vocabularyEntryObj.languageTech === 'JavaScript' && 'selected'}>JavaScript</option>
+    <option value="HTML" ${vocabularyEntryObj.languageTech === 'HTML' && 'selected'}>HTML</option>
+    <option value="CSS" ${vocabularyEntryObj.languageTech === 'CSS' && 'selected'}>CSS</option>
+  </select>
+</div>
+
       <button type="submit" class="btn btn-primary mt-3">${isUpdate ? 'Update' : 'Submit'} Vocabulary</button>
     </form>`;
 
