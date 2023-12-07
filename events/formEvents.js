@@ -13,7 +13,8 @@ const formEvents = (user) => {
           title: document.querySelector('#title').value,
           definition: document.querySelector('#definition').value,
           languageOrtech: document.querySelector('#languageTech').value,
-          uid: user.uid
+          uid: user.uid,
+          timesubmitted: new Date().toLocaleString()
         };
         createVocabularyCard(payload).then(({ name }) => {
           console.warn('this createbook name', name);
