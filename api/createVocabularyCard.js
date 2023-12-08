@@ -57,6 +57,17 @@ const deletevocabularyCard = (firebaseKey) => new Promise((resolve, reject) => {
     .then((data) => resolve(data))
     .catch(reject);
 });
+const getSingleVocabularyCard = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabularyentry/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
 export {
-  updateVocabularyCard, createVocabularyCard, getvocabularyCards, deletevocabularyCard
+  updateVocabularyCard, createVocabularyCard, getvocabularyCards, deletevocabularyCard, getSingleVocabularyCard
 };

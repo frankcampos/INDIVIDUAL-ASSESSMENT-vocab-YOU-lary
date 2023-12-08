@@ -1,7 +1,9 @@
 import renderToDOM from '../../utils/renderToDom';
+import clearDom from '../../utils/clearDom';
 
 const addVocabularyForm = (vocabularyEntryObjParam = {}) => {
-  // clearDom(); // Uncomment if you need to clear previous content
+  console.warn('this is the obj', vocabularyEntryObjParam);
+  clearDom();
 
   const vocabularyEntryObj = { ...vocabularyEntryObjParam };
   const isUpdate = Boolean(vocabularyEntryObj.firebaseKey);

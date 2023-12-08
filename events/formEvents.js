@@ -25,6 +25,20 @@ const formEvents = (user) => {
           });
         });
       }
+      if (e.target.id.includes('update-vocabulary')) {
+        const [, firebaseKey] = e.target.id.split('--');
+        const payload = {
+          title: document.querySelector('#title').value,
+          definition: document.querySelector('#definition').value,
+          languageOrtech: document.querySelector('#languageTech').value,
+          uid: user.uid,
+          firebaseKey,
+        };
+
+        updateVocabularyCard(payload).then(() => {
+          getvocabularyCards(user.uid).then(showvocabularyEntry);
+        });
+      }
     });
 };
 
