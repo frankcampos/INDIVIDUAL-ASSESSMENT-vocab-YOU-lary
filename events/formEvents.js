@@ -1,5 +1,5 @@
-import { updateVocabularyCard, createVocabularyCard } from '../api/createVocabularyCard';
-import clearDom from '../utils/clearDom';
+import { updateVocabularyCard, createVocabularyCard, getvocabularyCards } from '../api/createVocabularyCard';
+import showvocabularyEntry from '../pages/vocabulary';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit',
@@ -19,8 +19,10 @@ const formEvents = (user) => {
         createVocabularyCard(payload).then(({ name }) => {
           console.warn('this createbook name', name);
           const patchPayload = { firebaseKey: name };
-          updateVocabularyCard(patchPayload);
-          clearDom();
+
+          updateVocabularyCard(patchPayload).then(() => {
+            getvocabularyCards(user.uid).then(showvocabularyEntry);
+          });
         });
       }
     });
