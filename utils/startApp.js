@@ -4,6 +4,8 @@ import domBuilder from '../components/shared/domBuilder';
 import navigationEvents from '../events/navigationEvents';
 import formEvents from '../events/formEvents';
 import domEvents from '../events/domEvents';
+import { getvocabularyCards } from '../api/createVocabularyCard';
+import showvocabularyEntry from '../pages/vocabulary';
 
 const startApp = (user) => {
   domBuilder();
@@ -12,6 +14,7 @@ const startApp = (user) => {
   navigationEvents(user);
   formEvents(user);
   domEvents(user);
+  getvocabularyCards(user.uid).then(showvocabularyEntry);
 };
 
 export default startApp;

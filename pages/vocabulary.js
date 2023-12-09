@@ -3,6 +3,13 @@ import renderToDOM from '../utils/renderToDom';
 
 const showvocabularyEntry = (array) => {
   clearDom();
+  const btnString = `
+    <button class="btn btn-success btn-lg mb-4" id="javascript-btn">JavaScript</button>
+    <button class="btn btn-success btn-lg mb-4" id="html-btn">HTML</button>
+    <button class="btn btn-success btn-lg mb-4" id="css-btn">CSS</button>
+`;
+
+  renderToDOM('#add-button', btnString);
 
   let domString = '';
 
