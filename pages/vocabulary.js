@@ -9,8 +9,7 @@ const showvocabularyEntry = (array) => {
     <button class="btn btn-success btn-lg mb-4" id="css-btn">CSS</button>
 `;
 
-  renderToDOM('#add-button', btnString);
-
+  renderToDOM('#add-button', btnString); // let see
   let domString = '';
 
   array.forEach((vocabularyItem) => {
