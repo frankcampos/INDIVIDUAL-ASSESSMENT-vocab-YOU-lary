@@ -29,9 +29,10 @@ https://www.loom.com/share/d120cfa5cb3444a8a1cd79f4ad33e79a?sid=6bd89b5d-053a-46
 PLACE CODE SNIPPET HERE
 
 ## Project Screenshots <!-- These can be inside of your project. Look at the repos from class and see how the images are included in the readme -->
-<img width="1148" alt="landing page" src="/home/frankcampos/workspace/foundations/inclass/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary/utils/images/landing.png">
+![vocabularycard](https://github.com/frankcampos/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary/assets/26656478/5e1ea8b1-d13a-49d1-8a04-df2c9fc25a3c)
+![newentry](https://github.com/frankcampos/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary/assets/26656478/fa0296fe-c124-4515-afdb-2f84ef46f710)
+![landing](https://github.com/frankcampos/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary/assets/26656478/91772ee0-d52f-45cb-8f98-099f1c162151)
 
-<img width="1148" alt="new entry form" src="/home/frankcampos/workspace/foundations/inclass/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary/utils/images/newentry.png">
-<img width="1148" alt="display new vocabulary cards" src="/home/frankcampos/workspace/foundations/inclass/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary/utils/images/vocabularycard.png">
+
 ## Contributors
 - [Frank Campos](https://github.com/frankcampos)
