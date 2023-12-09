@@ -14,9 +14,9 @@ PLACE CODE SNIPPET HERE
 
 
 ## Features <!-- List your app features using bullets! Do NOT use a paragraph. No one will read that! -->
--On the landing page, the app will use Google authentication to authorize users to access the web app.
--When a new vocabulary term is added, an object should be created and stored in my Firebase real-time database.
--The web app has the functionality to filter by technology and also by using its individually assigned buttons.
+* On the landing page, the app will use Google authentication to authorize users to access the web app.
+* When a new vocabulary term is added, an object should be created and stored in my Firebase real-time database.
+* The web app has the functionality to filter by technology and also by using its individually assigned buttons.
 
 ## Video Walkthrough of APP NAME <!-- A loom link is sufficient -->
 https://www.loom.com/share/d120cfa5cb3444a8a1cd79f4ad33e79a?sid=6bd89b5d-053a-468c-bca7-c90152869f2d
