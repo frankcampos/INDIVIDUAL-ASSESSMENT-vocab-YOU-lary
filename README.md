@@ -8,9 +8,9 @@ The purpose of the application is to create a new vocabulary for different techn
 PLACE CODE SNIPPET HERE
 
 ## About the User <!-- This is a scaled down user persona -->
--The ideal user for this application is a full-stack web development student
--Everyone wants to keep track of the newly learned vocabulary.
--The problem this app solves is that it allows users to keep track of new vocabulary, which can also be organized by language or technology.-
+* The ideal user for this application is a full-stack web development student
+* Everyone wants to keep track of the newly learned vocabulary.
+* The problem this app solves is that it allows users to keep track of new vocabulary, which can also be organized by language or technology.-
 
 
 ## Features <!-- List your app features using bullets! Do NOT use a paragraph. No one will read that! -->
