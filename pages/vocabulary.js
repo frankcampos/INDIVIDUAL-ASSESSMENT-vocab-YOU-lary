@@ -18,8 +18,9 @@ const showvocabularyEntry = (array) => {
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">${vocabularyItem.title}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">${vocabularyItem.languageOrtech}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">Category: ${vocabularyItem.languageOrtech}</h6>
     <p class="card-text">${vocabularyItem.definition}</p>
+    <div class="text-muted small mb-2">created:${vocabularyItem.timesubmitted}</div>
     <button class="btn btn-primary" id="edit-vocabulary-btn--${vocabularyItem.firebaseKey}">Edit</button>
     <button class="btn btn-danger" id="delete-vocabulary-btn--${vocabularyItem.firebaseKey}">Delete</button>
   </div>
