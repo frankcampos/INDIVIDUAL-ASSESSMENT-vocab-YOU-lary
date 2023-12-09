@@ -68,6 +68,25 @@ const getSingleVocabularyCard = (firebaseKey) => new Promise((resolve, reject) =
     .then((data) => resolve(data))
     .catch(reject);
 });
+
+// TODO: FILTER Vocabulary by Tech
+const buttonFilterTech = (tech) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabularyentry.json?orderBy="languageOrtech"&equalTo="${tech}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
 export {
-  updateVocabularyCard, createVocabularyCard, getvocabularyCards, deletevocabularyCard, getSingleVocabularyCard
+  updateVocabularyCard, createVocabularyCard, getvocabularyCards, deletevocabularyCard, getSingleVocabularyCard, buttonFilterTech
 };
