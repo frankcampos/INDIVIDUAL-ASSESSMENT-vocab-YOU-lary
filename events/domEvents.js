@@ -1,4 +1,6 @@
-import { getvocabularyCards, deletevocabularyCard, getSingleVocabularyCard } from '../api/createVocabularyCard';
+import {
+  getvocabularyCards, deletevocabularyCard, getSingleVocabularyCard, buttonFilterTech
+} from '../api/createVocabularyCard';
 import addVocabularyForm from '../components/forms/addVocabularyEntry';
 import showvocabularyEntry from '../pages/vocabulary';
 
@@ -24,6 +26,18 @@ const domEvents = (user) => {
       console.warn('this is mine firebasekey', firebaseKey);
 
       getSingleVocabularyCard(firebaseKey).then((bookObj) => addVocabularyForm(bookObj));
+    }
+    if (e.target.id.includes('javascript-btn')) {
+      console.warn('I clicked the button javascript');
+      buttonFilterTech('JavaScript').then(showvocabularyEntry);
+    }
+    if (e.target.id.includes('html-btn')) {
+      console.warn('I clicked the button HTML');
+      buttonFilterTech('HTML').then(showvocabularyEntry);
+    }
+    if (e.target.id.includes('css-btn')) {
+      console.warn('I clicked the button CSS');
+      buttonFilterTech('CSS').then(showvocabularyEntry);
     }
   });
 };
